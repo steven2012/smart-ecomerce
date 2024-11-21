@@ -1,0 +1,127 @@
+/* Estilos generales para el navbar */
+.navbar {
+    background-color: #3a5a7a; /* Azul oscuro claro */
+    color: #e1e1e1; /* Texto gris muy suave (casi blanco) */
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra suave */
+}
+
+/* Contenedor del navbar para centrar el contenido */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo para el logo */
+.navbar-logo {
+    font-size: 1.9rem;
+    font-weight: bold;
+    color: #f1f1f1; /* Blanco suave */
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+.navbar-logo:hover {
+    color: #494646; /* Color suave en hover (rosado suave) */
+}
+
+/* Estilos para el menú de navegación */
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    transition: max-height 0.3s ease; /* Suaviza la transición del menú */
+    overflow: hidden;
+    max-height: 1000px; /* Por defecto el menú se expande */
+}
+
+.navbar-menu.active {
+    max-height: 500px; /* Menú expandido solo cuando se active */
+}
+
+.navbar-menu li {
+    margin-right: 25px;
+}
+
+.navbar-menu a {
+    color: #e1e1e1; /* Gris muy suave */
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-menu a:hover {
+    color: #302e2e; /* Hover rosado suave */
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+/* Estilos para los iconos (carrito, búsqueda, usuario) */
+.navbar-icons {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-icon {
+    font-size: 1.5rem;
+    color: #e1e1e1; /* Gris muy suave para los iconos */
+    margin-left: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-icon:hover {
+    color: #454342; /* Cambio de color en hover */
+    transform: scale(1.1); /* Efecto de ampliación */
+}
+
+/* Estilos para el icono de hamburguesa */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+/* Media Queries para mejorar la experiencia en móviles */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-menu {
+        flex-direction: column;
+        margin-top: 20px;
+        display: none;  /* Ocultamos el menú en pantallas pequeñas */
+    }
+
+    .navbar-menu.active {
+        display: block; /* Mostramos el menú cuando se activa */
+    }
+
+    .navbar-menu li {
+        margin-bottom: 15px;
+    }
+
+    .navbar-icons {
+        margin-top: 15px;
+    }
+
+    /* Mostramos el icono de hamburguesa en pantallas pequeñas */
+    .hamburger {
+        display: block;
+        font-size: 2rem;
+        color: #e1e1e1;
+        margin-left: 20px;
+    }
+}

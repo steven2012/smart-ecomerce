@@ -1,0 +1,72 @@
+<section class="background-radial-gradient overflow-hidden">
+  <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
+    <div class="row gx-lg-5 align-items-center mb-5">
+      <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
+        <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
+          ShopSphere <br />
+          <span style="color: hsl(218, 81%, 75%)">for your business</span>
+        </h1>
+        <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
+          Descubre ShopSphere, la plataforma donde tus deseos se convierten en realidad. Encuentra desde tecnología de
+          punta hasta los productos más innovadores para el hogar, todo en un solo lugar. ¡No esperes más! Regístrate
+          ahora y lleva tus compras al siguiente nivel con descuentos exclusivos y envío gratis en tu primera compra.
+          🚀 ¡Empieza a explorar hoy!
+        </p>
+      </div>
+
+      <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+        <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
+        <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
+
+        <div class="card bg-glass">
+          <div class="card-body px-4 py-5 px-md-5">
+            <!-- Formulario de Angular -->
+            <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+              <!-- Inputs para First Name y Last Name -->
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="text" id="firstName" class="form-control" name="firstName" ngModel required />
+                    <label class="form-label" for="firstName">First name</label>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="text" id="lastName" class="form-control" name="lastName" ngModel required />
+                    <label class="form-label" for="lastName">Last name</label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Input para Email -->
+              <div class="form-outline mb-4">
+                <input type="email" id="email" class="form-control" name="email" ngModel required />
+                <label class="form-label" for="email">Email address</label>
+              </div>
+
+              <!-- Input para Password -->
+              <div class="form-outline mb-4">
+                <input type="password" id="password" class="form-control" name="password" ngModel required />
+                <label class="form-label" for="password">Password</label>
+              </div>
+
+              <!-- Checkbox -->
+              <div class="form-check d-flex justify-content-center mb-4">
+                <input class="form-check-input me-2" type="checkbox" value="" id="newsletter" name="newsletter"
+                  ngModel />
+                <label class="form-check-label" for="newsletter">
+                  Subscribe to our newsletter
+                </label>
+              </div>
+
+              <!-- Submit button -->
+              <button type="submit" class="btn btn-primary btn-block mb-4">
+                Sign in
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

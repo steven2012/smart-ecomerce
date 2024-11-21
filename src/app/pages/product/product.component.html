@@ -1,0 +1,29 @@
+<div id="product" class="product-content">
+    <div class="container mt-4" *ngIf="isLoginRoute()">
+        <!-- Filtro de búsqueda -->
+        <div class="row mb-4">
+            <div class="col-3">
+                <input type="text" [(ngModel)]="searchQuery" class="form-control" placeholder="Buscar por nombre de producto" />
+            </div>
+        </div>
+        
+        <div class="row">
+            <!-- Cada columna ocupa 3 de las 12 unidades del ancho (12 / 3 = 4 columnas por fila) -->
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4" *ngFor="let card of filteredCards()">
+                <div class="card">
+                    <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+                        <img [src]="card.imageUrl" class="img-fluid" />
+                        <a href="#!">
+                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ card.title }}</h5>
+                        <p class="card-text">{{ card.text }}</p>
+                        <a href="#" class="btn btn-primary" data-mdb-ripple-init>Comprar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

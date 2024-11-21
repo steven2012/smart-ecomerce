@@ -1,0 +1,26 @@
+<nav class="navbar">
+  <div class="navbar-container">
+    <!-- Logo o nombre de la tienda -->
+    <a href="#" class="navbar-logo">ShopSphere</a>
+
+    <!-- Menú de navegación -->
+    <ul class="navbar-menu" [ngClass]="{'active': isMenuOpen}">
+      <li><a href="/product">Productos</a></li>
+      <li><a href="/stock">Inventario</a></li>
+      <li><a href="#">Contactos</a></li>
+      <li><a href="/login">Login</a></li>
+    </ul>
+
+    <!-- Iconos de la derecha (carrito, búsqueda, usuario) -->
+    <div class="navbar-icons">
+      <a href="#" class="navbar-icon"><i class="fas fa-search"></i></a>
+      <a href="#" class="navbar-icon"><i class="fas fa-shopping-cart"></i></a>
+      <a href="/profile" class="navbar-icon"><i class="fas fa-user"></i></a>
+      
+      <!-- Icono de hamburguesa (solo visible en pantallas pequeñas) -->
+      <div class="hamburger" (click)="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </div>
+</nav>

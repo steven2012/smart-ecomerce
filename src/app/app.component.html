@@ -1,0 +1,7 @@
+<div class="ecommerce-container">
+    <!-- Mostrar el Navbar solo si se debe -->
+    <ng-container *ngIf="showNavbar()">
+        <app-view-ecomerce></app-view-ecomerce>
+    </ng-container>
+</div>
+<router-outlet></router-outlet>

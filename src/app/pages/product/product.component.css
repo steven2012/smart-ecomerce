@@ -1,0 +1,154 @@
+/* Contenedor principal de producto */
+#product .container {
+  margin-top: 70px; /* Espacio debajo del navbar */
+}
+
+/* Estilos de las tarjetas de producto */
+#product .card {
+  max-width: 18rem;
+  width: 100%; /* Evita que se estiren horizontalmente */
+  margin: auto;
+  border-radius: 12px; /* Bordes más redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto hover suave */
+  height: auto; /* Evita que se alarguen verticalmente */
+}
+
+/* Estilos para las imágenes */
+#product .card img {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px; /* Bordes de la imagen redondeados */
+  width: 100%; /* Evita que las imágenes se estiren */
+}
+
+/* Estilo del contenido de la tarjeta */
+#product .card-body {
+  padding: 15px;
+  text-align: center; /* Centra el contenido */
+}
+
+/* Estilo del título de la tarjeta */
+#product .card-body .card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333; /* Título en color oscuro */
+}
+
+/* Estilo del texto de la tarjeta */
+#product .card-body .card-text {
+  font-size: 0.9rem;
+  color: #666; /* Texto más suave */
+  margin-bottom: 20px;
+}
+
+/* Estilos del botón */
+#product .card-body .btn-primary {
+  background-color: #333; /* Color negro claro/oscuro */
+  border: none; /* Elimina el borde */
+  color: #fff; /* Texto blanco */
+  padding: 12px 20px; /* Aumento de padding */
+  font-size: 1rem;
+  border-radius: 25px; /* Bordes redondeados */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Efecto hover suave */
+}
+
+/* Efecto hover en el botón */
+#product .card-body .btn-primary:hover {
+  background-color: #555; /* Un tono más oscuro cuando se pasa el ratón */
+  transform: translateY(-2px); /* Ligera animación de elevación */
+}
+
+/* Efecto hover en la tarjeta */
+#product .card:hover {
+  transform: translateY(-5px); /* Ligera elevación al pasar el mouse */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+}
+
+/* Estilo para las filas que contienen tarjetas */
+#product .row {
+  display: flex;
+  flex-wrap: wrap; /* Asegura que los elementos se ajusten al espacio */
+  justify-content: center; /* Centra las tarjetas horizontalmente */
+  align-items: flex-start; /* Evita que las tarjetas se estiren verticalmente */
+  gap: 20px; /* Espaciado uniforme entre tarjetas */
+  margin: 0 auto;
+}
+
+/* Manejo del contenedor vacío */
+#product .row:empty {
+  justify-content: center;
+}
+
+/* Hacer que el filtro permanezca en la parte superior y resaltar con sombra */
+#product .container .row.mb-4 {
+  position: sticky;
+  top: 70px; /* Ajusta este valor según la altura de tu navbar */
+  z-index: 10; /* Asegura que quede por encima de otros elementos */
+  background-color: #fff; /* Fondo blanco */
+  padding-top: 10px; /* Un pequeño margen arriba */
+  border-radius: 8px; /* Bordes redondeados */
+}
+
+/* Ajustar el campo de búsqueda */
+#product .container .row.mb-4 input {
+  border-radius: 25px; /* Bordes redondeados */
+  padding: 10px 20px; /* Padding interno */
+  font-size: 1rem; /* Tamaño de fuente */
+  box-sizing: border-box; /* Incluye padding en el tamaño total */
+  max-width: 100%; /* Limita el ancho */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  transition: box-shadow 0.3s ease; /* Transición suave */
+  border: 1px solid #73a2df; /* Borde gris claro */
+}
+
+/* Efecto de hover para el campo de búsqueda */
+#product .container .row.mb-4 input:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el ratón */
+  border: 1px solid #59a1ef; /* Borde más oscuro cuando el campo está en hover */
+}
+
+/* Media Queries para mejorar la experiencia en móviles */
+@media (max-width: 768px) {
+  /* Ajustar el margen superior para evitar solapamiento con navbar */
+  #product .container {
+    margin-top: 120px; /* Aumentar el espacio en pantallas pequeñas */
+  }
+
+  /* Media Query: Ocultar el campo de búsqueda en resoluciones pequeñas */
+  #product .container .row.mb-4 input.form-control {
+    display: none !important;
+  }
+
+  /* Media Query: Ocultar el filtro en resoluciones pequeñas */
+  #product .container .row.mb-4 {
+    display: none !important; /* Se asegura que no sea sobrescrito */
+  }
+
+  /* Establecer las tarjetas en una columna para pantallas pequeñas */
+  #product .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Ajustar las tarjetas para que ocupen el 100% del ancho */
+  #product .col-lg-3,
+  #product .col-md-4,
+  #product .col-sm-6,
+  #product .col-xs-12 {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /* Ajustar el input de búsqueda para que ocupe el 100% del ancho */
+  #product .container .row.mb-4 input {
+    width: 100%;
+  }
+
+  /* Reducir el tamaño del botón de compra en pantallas pequeñas */
+  #product .card-body .btn-primary {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+}
