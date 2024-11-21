@@ -1,0 +1,10 @@
+{
+  "routes": {
+    "/": {},
+    "/ecomerce": {},
+    "/login": {},
+    "/product": {},
+    "/profile": {},
+    "/stock": {}
+  }
+}
